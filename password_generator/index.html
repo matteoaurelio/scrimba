@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!-- <main> = "the primary content of the page. " A semantic tag-->
+    <main class="container">
+      <!--<h1> = the single most important heading. One per page. -->
+      <h1 class="title">
+        Generate a <span class="title-accent">random password</span>
+      </h1>
+
+      <p class="subtitle">Never use an insecure password again.</p>
+
+      <div class="length-control">
+        <label for="length-select">Password Length</label>
+
+        <select id="length-select">
+          <option value="standard">Standard</option>
+          <option value="ultra-safe">Long (ultra-safe)</option>
+        </select>
+      </div>
+
+      <button class="generate-btn" id="generate-btn">Generate passwords</button>
+
+      <hr class="divider" />
+
+      <div class="output">
+        <div class="password-box" id="password-box-1">
+          <span class="password-text" id="password-text-1"></span>
+          <button
+            class="toggle-password"
+            id="toggle-1"
+            type="button"
+            aria-label="Show password"
+          >
+            <svg
+              class="eye-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </button>
+        </div>
+        <div class="password-box" id="password-box-2">
+          <span class="password-text" id="password-text-2"></span>
+          <button
+            class="toggle-password"
+            id="toggle-2"
+            type="button"
+            aria-label="Show password"
+          >
+            <svg
+              class="eye-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+    <!--Script goes at the BOTTOM of body on purpose (see below)-->
+    <script src="index.js"></script>
+  </body>
+</html>

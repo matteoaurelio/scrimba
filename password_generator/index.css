@@ -1,0 +1,164 @@
+/* :root is the <html> element. Variables declared here are global */
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg: #1f1f1f;
+  --card-bg: #1f2937; /* the dark navy card */
+  --text: #ffffff;
+  --text-muted: #94a3b8; /* the grey subtitle */
+  --accent: #4adf86; /* the green */
+  --button-accent: #10b981;
+  --box-bg: #1a1b2e;
+  --password-bg: #273549;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+
+  display: flex;
+  justify-content: center; /* center child horizontally */
+  align-items: center; /* center child vertically */
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.title-accent {
+  color: var(--accent);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.length-control {
+  margin-bottom: 24px;
+  margin-top: 30px;
+}
+
+.length-control label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.length-control select {
+  width: 100%;
+  background-color: var(--password-bg);
+  color: var(--text);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.generate-btn {
+  background-color: var(--button-accent);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #334155;
+  margin: 20px 0px;
+}
+
+.output {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.password-box {
+  display: flex;
+  background-color: var(--password-bg);
+  color: var(--accent);
+  padding: 12px 18px;
+  min-height: 44px;
+  border-radius: 10px;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.05s ease;
+  justify-content: space-between;
+}
+
+.password-box.copied {
+  background-color: #064e3b;
+  color: #4ade80;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(74, 222, 128, 0.4);
+  min-width: 0;
+}
+
+.password-box:hover {
+  opacity: 0.85;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-left: 12px;
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.8;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.eye-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.password-text {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
